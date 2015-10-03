@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		94299BE01BC059FC006D2EFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94299BDF1BC059FC006D2EFC /* AppDelegate.swift */; };
+		94299BE21BC059FC006D2EFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94299BE11BC059FC006D2EFC /* ViewController.swift */; };
+		94299BE51BC059FC006D2EFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94299BE31BC059FC006D2EFC /* Main.storyboard */; };
+		94299BE71BC059FC006D2EFC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94299BE61BC059FC006D2EFC /* Images.xcassets */; };
+		94299BEA1BC059FC006D2EFC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94299BE81BC059FC006D2EFC /* LaunchScreen.xib */; };
+		94299BF61BC059FC006D2EFC /* Viral_Bible_IosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94299BF51BC059FC006D2EFC /* Viral_Bible_IosTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		94299BF01BC059FC006D2EFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94299BD21BC059FC006D2EFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 94299BD91BC059FC006D2EFC;
+			remoteInfo = "Viral-Bible-Ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		94299BDA1BC059FC006D2EFC /* Viral-Bible-Ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Viral-Bible-Ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94299BDE1BC059FC006D2EFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94299BDF1BC059FC006D2EFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		94299BE11BC059FC006D2EFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		94299BE41BC059FC006D2EFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		94299BE61BC059FC006D2EFC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		94299BE91BC059FC006D2EFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		94299BEF1BC059FC006D2EFC /* Viral-Bible-IosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Viral-Bible-IosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94299BF41BC059FC006D2EFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94299BF51BC059FC006D2EFC /* Viral_Bible_IosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viral_Bible_IosTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		94299BD71BC059FC006D2EFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94299BEC1BC059FC006D2EFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		94299BD11BC059FC006D2EFC = {
+			isa = PBXGroup;
+			children = (
+				94299BDC1BC059FC006D2EFC /* Viral-Bible-Ios */,
+				94299BF21BC059FC006D2EFC /* Viral-Bible-IosTests */,
+				94299BDB1BC059FC006D2EFC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		94299BDB1BC059FC006D2EFC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				94299BDA1BC059FC006D2EFC /* Viral-Bible-Ios.app */,
+				94299BEF1BC059FC006D2EFC /* Viral-Bible-IosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		94299BDC1BC059FC006D2EFC /* Viral-Bible-Ios */ = {
+			isa = PBXGroup;
+			children = (
+				94299BDF1BC059FC006D2EFC /* AppDelegate.swift */,
+				94299BE11BC059FC006D2EFC /* ViewController.swift */,
+				94299BE31BC059FC006D2EFC /* Main.storyboard */,
+				94299BE61BC059FC006D2EFC /* Images.xcassets */,
+				94299BE81BC059FC006D2EFC /* LaunchScreen.xib */,
+				94299BDD1BC059FC006D2EFC /* Supporting Files */,
+			);
+			path = "Viral-Bible-Ios";
+			sourceTree = "<group>";
+		};
+		94299BDD1BC059FC006D2EFC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				94299BDE1BC059FC006D2EFC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		94299BF21BC059FC006D2EFC /* Viral-Bible-IosTests */ = {
+			isa = PBXGroup;
+			children = (
+				94299BF51BC059FC006D2EFC /* Viral_Bible_IosTests.swift */,
+				94299BF31BC059FC006D2EFC /* Supporting Files */,
+			);
+			path = "Viral-Bible-IosTests";
+			sourceTree = "<group>";
+		};
+		94299BF31BC059FC006D2EFC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				94299BF41BC059FC006D2EFC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		94299BD91BC059FC006D2EFC /* Viral-Bible-Ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94299BF91BC059FC006D2EFC /* Build configuration list for PBXNativeTarget "Viral-Bible-Ios" */;
+			buildPhases = (
+				94299BD61BC059FC006D2EFC /* Sources */,
+				94299BD71BC059FC006D2EFC /* Frameworks */,
+				94299BD81BC059FC006D2EFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Viral-Bible-Ios";
+			productName = "Viral-Bible-Ios";
+			productReference = 94299BDA1BC059FC006D2EFC /* Viral-Bible-Ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		94299BEE1BC059FC006D2EFC /* Viral-Bible-IosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94299BFC1BC059FC006D2EFC /* Build configuration list for PBXNativeTarget "Viral-Bible-IosTests" */;
+			buildPhases = (
+				94299BEB1BC059FC006D2EFC /* Sources */,
+				94299BEC1BC059FC006D2EFC /* Frameworks */,
+				94299BED1BC059FC006D2EFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94299BF11BC059FC006D2EFC /* PBXTargetDependency */,
+			);
+			name = "Viral-Bible-IosTests";
+			productName = "Viral-Bible-IosTests";
+			productReference = 94299BEF1BC059FC006D2EFC /* Viral-Bible-IosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		94299BD21BC059FC006D2EFC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Alan Young";
+				TargetAttributes = {
+					94299BD91BC059FC006D2EFC = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					94299BEE1BC059FC006D2EFC = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 94299BD91BC059FC006D2EFC;
+					};
+				};
+			};
+			buildConfigurationList = 94299BD51BC059FC006D2EFC /* Build configuration list for PBXProject "Viral-Bible-Ios" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 94299BD11BC059FC006D2EFC;
+			productRefGroup = 94299BDB1BC059FC006D2EFC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				94299BD91BC059FC006D2EFC /* Viral-Bible-Ios */,
+				94299BEE1BC059FC006D2EFC /* Viral-Bible-IosTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		94299BD81BC059FC006D2EFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94299BE51BC059FC006D2EFC /* Main.storyboard in Resources */,
+				94299BEA1BC059FC006D2EFC /* LaunchScreen.xib in Resources */,
+				94299BE71BC059FC006D2EFC /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94299BED1BC059FC006D2EFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		94299BD61BC059FC006D2EFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94299BE21BC059FC006D2EFC /* ViewController.swift in Sources */,
+				94299BE01BC059FC006D2EFC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94299BEB1BC059FC006D2EFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94299BF61BC059FC006D2EFC /* Viral_Bible_IosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		94299BF11BC059FC006D2EFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 94299BD91BC059FC006D2EFC /* Viral-Bible-Ios */;
+			targetProxy = 94299BF01BC059FC006D2EFC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		94299BE31BC059FC006D2EFC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94299BE41BC059FC006D2EFC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		94299BE81BC059FC006D2EFC /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94299BE91BC059FC006D2EFC /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		94299BF71BC059FC006D2EFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		94299BF81BC059FC006D2EFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		94299BFA1BC059FC006D2EFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Viral-Bible-Ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		94299BFB1BC059FC006D2EFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Viral-Bible-Ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		94299BFD1BC059FC006D2EFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Viral-Bible-IosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Viral-Bible-Ios.app/Viral-Bible-Ios";
+			};
+			name = Debug;
+		};
+		94299BFE1BC059FC006D2EFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Viral-Bible-IosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Viral-Bible-Ios.app/Viral-Bible-Ios";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		94299BD51BC059FC006D2EFC /* Build configuration list for PBXProject "Viral-Bible-Ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94299BF71BC059FC006D2EFC /* Debug */,
+				94299BF81BC059FC006D2EFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94299BF91BC059FC006D2EFC /* Build configuration list for PBXNativeTarget "Viral-Bible-Ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94299BFA1BC059FC006D2EFC /* Debug */,
+				94299BFB1BC059FC006D2EFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		94299BFC1BC059FC006D2EFC /* Build configuration list for PBXNativeTarget "Viral-Bible-IosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94299BFD1BC059FC006D2EFC /* Debug */,
+				94299BFE1BC059FC006D2EFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 94299BD21BC059FC006D2EFC /* Project object */;
+}
