@@ -70,4 +70,16 @@ class RecordViewController: UIViewController, RecordControllerDelegate {
         self.recordButton.enabled = true
     }
     
+    // MARK: NSObject
+    
+    deinit {
+        if let record = self.recordController {
+            do {
+                try NSFileManager.defaultManager().removeItemAtPath(record.fileURL.absoluteString)
+            } catch {
+                
+            }
+        }
+    }
+    
 }

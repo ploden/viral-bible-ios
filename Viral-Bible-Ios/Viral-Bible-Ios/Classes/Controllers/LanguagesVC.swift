@@ -1,5 +1,5 @@
 //
-//  ViewController_Custom.swift
+//  LanguagesVC.swift
 //
 //
 //  Created by Alan Young Admin on 10/3/15.
@@ -10,15 +10,16 @@ import Foundation
 
 import UIKit
 
-class ViewController_Custom: UIViewController, UITableViewDataSource,UITableViewDelegate {
+class LanguagesVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     var languages = [BibleLanguage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.'
-        
+
+        self.tableView.registerNib(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
+
         APIController.getLanguages { (languages, error) -> () in
             NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
                 if let languages = languages {
@@ -46,26 +47,11 @@ class ViewController_Custom: UIViewController, UITableViewDataSource,UITableView
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("showView", sender:self)
-        
-    }
-    override func prepareForSegue(segue: UIStoryboardSegue, sender:
-        AnyObject?)
-    {
-        if (segue.identifier == "showView")
-        {
-            // upcoming is set to NewViewController (.swift)
-            var upcoming: NewViewController = segue.destinationViewController
-                as! NewViewController
-            // indexPath is set to the path that was tapped
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-                // titleString is set to the title at the row in the objects array.
-                let titleString = self.languages[indexPath.row].name
-                // the titleStringViaSegue property of NewViewController is set.
-                //upcoming.titleStringViaSegue = titleString
-                self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
-            }
-        }
+        let selectedLanguage = self.languages[indexPath.row]
+
+        let vc = VersionsVC.VB_instantiateFromStoryboard() as! VersionsVC
+        vc.bibleLanguage = selectedLanguage
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

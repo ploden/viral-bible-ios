@@ -166,7 +166,7 @@ class APIController {
       
       session.dataTaskWithRequest(request, completionHandler: { (responseData, response, error) -> Void in
         if let responseData = responseData {
-          print(String(data: responseData, encoding: NSUTF8StringEncoding))
+          //print(String(data: responseData, encoding: NSUTF8StringEncoding))
           
           do {
             let json = try NSJSONSerialization.JSONObjectWithData(responseData, options: NSJSONReadingOptions.AllowFragments)
@@ -175,8 +175,6 @@ class APIController {
             
             if let verses = json as? [[String : AnyObject]] {
               for verse in verses {
-                print(verse.keys)
-                
                 if let
                   verseID = verse["verse_id"] as? String,
                   verseIDInt = Int16(verseID),

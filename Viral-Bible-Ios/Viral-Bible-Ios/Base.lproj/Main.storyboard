@@ -21,10 +21,10 @@
             </objects>
             <point key="canvasLocation" x="-2673" y="236"/>
         </scene>
-        <!--View Controller Custom-->
+        <!--LanguagesVC-->
         <scene sceneID="6yq-Uj-CZ5">
             <objects>
-                <viewController id="7Ty-du-CAy" customClass="ViewController_Custom" customModule="Viral_Bible_Ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LanguagesVC" id="7Ty-du-CAy" customClass="LanguagesVC" customModule="Viral_Bible_Ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Dj1-ed-avo"/>
                         <viewControllerLayoutGuide type="bottom" id="elp-Gr-JFt"/>
@@ -41,7 +41,7 @@
                                         <rect key="frame" x="0.0" y="86" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D05-bl-V1W" id="pvn-yI-X6E">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Language" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NjB-sE-QPQ">
@@ -74,17 +74,16 @@
                     <navigationItem key="navigationItem" id="efv-iz-pTu"/>
                     <connections>
                         <outlet property="tableView" destination="LFD-s3-ldq" id="lcQ-c0-xs1"/>
-                        <segue destination="Ubc-AX-swp" kind="show" identifier="showView" id="I7X-QB-bvW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J6R-5U-riQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="379" y="340"/>
+            <point key="canvasLocation" x="-1717" y="236"/>
         </scene>
-        <!--New View Controller-->
+        <!--VersionsVC-->
         <scene sceneID="szp-Ft-DWk">
             <objects>
-                <viewController id="Ubc-AX-swp" customClass="NewViewController" customModule="Viral_Bible_Ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VersionsVC" id="Ubc-AX-swp" customClass="VersionsVC" customModule="Viral_Bible_Ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZQe-Fo-ta0"/>
                         <viewControllerLayoutGuide type="bottom" id="RIG-2c-UUk"/>
@@ -94,29 +93,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="QWW-EH-pd8">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="jTj-Xb-293" customClass="TableViewCell" customModule="Viral_Bible_Ios">
-                                        <rect key="frame" x="0.0" y="86" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jTj-Xb-293" id="YKh-DT-Cke">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Language" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTj-0a-w59">
-                                                    <rect key="frame" x="33" y="11" width="300" height="22"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="titleLabel" destination="qTj-0a-w59" id="EXY-bD-0jt"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="Ubc-AX-swp" id="9sW-Ek-jQw"/>
                                     <outlet property="delegate" destination="Ubc-AX-swp" id="wXh-cF-QLW"/>
@@ -129,7 +107,13 @@
                             <constraint firstItem="RIG-2c-UUk" firstAttribute="top" secondItem="QWW-EH-pd8" secondAttribute="bottom" id="env-qL-7Wz"/>
                             <constraint firstItem="QWW-EH-pd8" firstAttribute="top" secondItem="ZQe-Fo-ta0" secondAttribute="bottom" id="jIp-Zb-BJ7"/>
                             <constraint firstItem="QWW-EH-pd8" firstAttribute="leading" secondItem="AD1-dk-4oG" secondAttribute="leading" id="moQ-B4-vf0"/>
+                            <constraint firstItem="QWW-EH-pd8" firstAttribute="top" secondItem="ZQe-Fo-ta0" secondAttribute="bottom" id="wGq-AQ-JqT"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="jIp-Zb-BJ7"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="rtr-r3-1Ja"/>
                     <connections>
@@ -138,7 +122,118 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4FJ-ec-jqR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="379" y="340"/>
+            <point key="canvasLocation" x="-849" y="236"/>
+        </scene>
+        <!--BooksVC-->
+        <scene sceneID="P38-QR-i1a">
+            <objects>
+                <viewController storyboardIdentifier="BooksVC" id="a8f-iH-661" customClass="BooksVC" customModule="Viral_Bible_Ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wLm-G5-Msn"/>
+                        <viewControllerLayoutGuide type="bottom" id="X5e-8d-tmM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j2P-OM-VKD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p6S-7N-shO">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="a8f-iH-661" id="Zwi-z9-E3d"/>
+                                    <outlet property="delegate" destination="a8f-iH-661" id="PjF-Eq-mSG"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="X5e-8d-tmM" firstAttribute="top" secondItem="p6S-7N-shO" secondAttribute="bottom" id="GHC-m6-2nz"/>
+                            <constraint firstItem="p6S-7N-shO" firstAttribute="leading" secondItem="j2P-OM-VKD" secondAttribute="leading" id="GSq-Hu-NyT"/>
+                            <constraint firstItem="p6S-7N-shO" firstAttribute="top" secondItem="j2P-OM-VKD" secondAttribute="top" id="SUX-39-sBz"/>
+                            <constraint firstAttribute="trailing" secondItem="p6S-7N-shO" secondAttribute="trailing" id="uWa-P8-LhJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="p6S-7N-shO" id="wFv-3t-GJw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Klv-LK-fYh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57" y="236"/>
+        </scene>
+        <!--ChaptersVC-->
+        <scene sceneID="Zgh-xr-nQB">
+            <objects>
+                <viewController storyboardIdentifier="ChaptersVC" id="wTP-YB-a5h" customClass="ChaptersVC" customModule="Viral_Bible_Ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x7Z-Qf-R1h"/>
+                        <viewControllerLayoutGuide type="bottom" id="CRw-im-ENG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XDM-vs-hyG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pyB-EN-k7t">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="wTP-YB-a5h" id="Of4-pC-t5W"/>
+                                    <outlet property="delegate" destination="wTP-YB-a5h" id="gQf-Qh-KPj"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pyB-EN-k7t" firstAttribute="top" secondItem="XDM-vs-hyG" secondAttribute="top" id="7tx-XK-TdP"/>
+                            <constraint firstItem="pyB-EN-k7t" firstAttribute="leading" secondItem="XDM-vs-hyG" secondAttribute="leading" id="Xgb-QO-mZR"/>
+                            <constraint firstAttribute="trailing" secondItem="pyB-EN-k7t" secondAttribute="trailing" id="eeI-3s-lzE"/>
+                            <constraint firstItem="CRw-im-ENG" firstAttribute="top" secondItem="pyB-EN-k7t" secondAttribute="bottom" id="iJe-Vw-W6M"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="pyB-EN-k7t" id="HQ4-CU-Qwx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9I5-8J-3oV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="802" y="236"/>
+        </scene>
+        <!--Verses DetailVC-->
+        <scene sceneID="mBp-LT-CgR">
+            <objects>
+                <viewController storyboardIdentifier="VersesDetailVC" id="FZA-R5-sj1" customClass="VersesDetailVC" customModule="Viral_Bible_Ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B2Y-pe-bLC"/>
+                        <viewControllerLayoutGuide type="bottom" id="PJ8-Sc-QUn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0pi-Rd-w6U">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a4e-gD-eXC">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="FZA-R5-sj1" id="jwc-AM-8xf"/>
+                                    <outlet property="delegate" destination="FZA-R5-sj1" id="n9c-vH-cKp"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a4e-gD-eXC" firstAttribute="top" secondItem="0pi-Rd-w6U" secondAttribute="top" id="LQ8-ST-NxO"/>
+                            <constraint firstItem="PJ8-Sc-QUn" firstAttribute="top" secondItem="a4e-gD-eXC" secondAttribute="bottom" id="TAu-Mb-FvN"/>
+                            <constraint firstItem="a4e-gD-eXC" firstAttribute="leading" secondItem="0pi-Rd-w6U" secondAttribute="leading" id="XE0-hk-QkA"/>
+                            <constraint firstAttribute="trailing" secondItem="a4e-gD-eXC" secondAttribute="trailing" id="wCK-Jx-zdZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="a4e-gD-eXC" id="pz5-qd-6CW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0dv-Uw-wrA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1590" y="236"/>
         </scene>
         <!--Record View Controller-->
         <scene sceneID="k2O-Zi-wEG">
@@ -234,7 +329,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fS5-9F-KUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="379" y="1208"/>
+            <point key="canvasLocation" x="-1717" y="1004"/>
         </scene>
     </scenes>
 </document>
