@@ -235,10 +235,10 @@
             </objects>
             <point key="canvasLocation" x="1590" y="236"/>
         </scene>
-        <!--Record View Controller-->
+        <!--RecordVC-->
         <scene sceneID="k2O-Zi-wEG">
             <objects>
-                <viewController storyboardIdentifier="RecordViewController" id="8zN-KT-uJY" customClass="RecordViewController" customModule="Viral_Bible_Ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecordVC" id="8zN-KT-uJY" customClass="RecordVC" customModule="Viral_Bible_Ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JgR-id-48H"/>
                         <viewControllerLayoutGuide type="bottom" id="nii-H1-kr7"/>

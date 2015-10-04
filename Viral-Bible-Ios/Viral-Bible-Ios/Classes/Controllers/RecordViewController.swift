@@ -1,5 +1,5 @@
 //
-//  RecordViewController.swift
+//  RecordVC.swift
 //  Viral-Bible-Ios
 //
 //  Created by Philip Loden on 10/3/15.
@@ -8,24 +8,40 @@
 
 import UIKit
 
-class RecordViewController: UIViewController, RecordControllerDelegate {
+class RecordVC: UIViewController, RecordControllerDelegate {
 
     @IBOutlet var verseLabel : UILabel!
     @IBOutlet var playButton : UIButton!
     @IBOutlet var recordButton : UIButton!
     
-    var verse : BibleVerse?
+    var uploadBarButtonItem : UIBarButtonItem!
+    
+    var bibleVerse : BibleVerse?
     var recordController : RecordController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.uploadBarButtonItem = UIBarButtonItem(title: "Upload", style: UIBarButtonItemStyle.Done, target: self, action: Selector("uploadBarButtonItemTouched:"))
+        self.uploadBarButtonItem.enabled = false
+        self.navigationItem.rightBarButtonItem = self.uploadBarButtonItem
+
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Done, target: self, action: Selector("cancelBarButtonItemTouched:"))
+
         self.recordController = RecordController()
         self.recordController?.delegate = self
-        self.verseLabel.text = self.verse?.verseText
+        self.verseLabel.text = self.bibleVerse?.verseText
     }
     
     // MARK: IBActions
+    
+    @IBAction func uploadBarButtonItemTouched(sender: AnyObject?) {
+        self.upload()
+    }
+
+    @IBAction func cancelBarButtonItemTouched(sender: AnyObject?) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     @IBAction func playButtonTouched(sender: AnyObject?) {
         var title : String?
@@ -55,6 +71,7 @@ class RecordViewController: UIViewController, RecordControllerDelegate {
             self.recordController?.stopRecording()
             title = "Record"
             self.playButton.enabled = true
+            self.uploadBarButtonItem.enabled = true
         } else {
             self.recordController?.startRecording()
             title = "Stop"
@@ -68,6 +85,19 @@ class RecordViewController: UIViewController, RecordControllerDelegate {
     func recordControllerDidFinishPlaying(recordController: RecordController) {
         self.playButton.setTitle("Play", forState: .Normal)
         self.recordButton.enabled = true
+    }
+    
+    // MARK: Helper methods
+    
+    func upload() {
+        if let
+            verse = self.bibleVerse,
+            url = self.recordController?.fileURL
+        {
+            APIController.uploadRecording(verse.bibleBook, chapterID: verse.chapterID, fileURL: url, completion: { (error) -> () in
+                
+            })
+        }
     }
     
     // MARK: NSObject

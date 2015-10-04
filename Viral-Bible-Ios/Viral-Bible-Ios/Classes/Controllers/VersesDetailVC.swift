@@ -63,8 +63,16 @@ class VersesDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if let verses = self.bibleVerses {
-            let selectedVerse = verses[indexPath.row]
+        NSOperationQueue.mainQueue().addOperationWithBlock { () -> Void in
+            if let verses = self.bibleVerses {
+                let selectedVerse = verses[indexPath.row]
+                
+                let vc = RecordVC.VB_instantiateFromStoryboard() as! RecordVC
+                vc.bibleVerse = selectedVerse
+                let nc = UINavigationController(rootViewController: vc)
+                
+                self.presentViewController(nc, animated: true, completion: nil)
+            }
         }
     }
 

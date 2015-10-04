@@ -13,6 +13,14 @@ class VerseTVCell: UITableViewCell {
     var bibleVerse : BibleVerse? {
         didSet {
             self.verseTextView.text = self.bibleVerse?.verseText
+            if let
+                recordings = self.bibleVerse?.recordings
+                where recordings.count > 0
+            {
+                self.verseTextView.textColor = .blackColor()
+            } else {
+                self.verseTextView.textColor = .grayColor()
+            }
         }
     }
     

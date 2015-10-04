@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>S3_SECRET_KEY</key>
-	<string></string>
+	<string>gf5RkWZdUT79zNH9IwYAnTOJqSHZRlm71UZu9oeY</string>
 	<key>S3_BUCKET</key>
-	<string></string>
+	<string>viralbible01</string>
 	<key>S3_ACCESS_KEY_ID</key>
-	<string></string>
+	<string>AKIAIC3BB73KMFEWAZPA</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

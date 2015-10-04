@@ -10,7 +10,9 @@ import Foundation
 
 struct BibleVerse {
   
+  let bibleBook : BibleBook
+  let chapterID : Int16
   let verseText : String
-  let verseID : Int16
-  
+  let bibleVerseID : Int16
+    let recordings : [BibleVerseRecording]?
 }
