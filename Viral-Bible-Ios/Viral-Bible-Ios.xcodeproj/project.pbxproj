@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D8BFFDE1BC060B600EF5F40 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8BFFDD1BC060B600EF5F40 /* APIController.swift */; settings = {ASSET_TAGS = (); }; };
+		8D8BFFE01BC0617D00EF5F40 /* BibleLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8BFFDF1BC0617D00EF5F40 /* BibleLanguage.swift */; settings = {ASSET_TAGS = (); }; };
+		8D8BFFE21BC0718000EF5F40 /* BibleVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8BFFE11BC0718000EF5F40 /* BibleVersion.swift */; settings = {ASSET_TAGS = (); }; };
+		8D8BFFE41BC08E2900EF5F40 /* BibleBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8BFFE31BC08E2900EF5F40 /* BibleBook.swift */; settings = {ASSET_TAGS = (); }; };
+		8D8BFFE81BC09BDC00EF5F40 /* BibleVerse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8BFFE71BC09BDC00EF5F40 /* BibleVerse.swift */; settings = {ASSET_TAGS = (); }; };
+		8D8BFFEA1BC0B05A00EF5F40 /* RecordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8BFFE91BC0B05A00EF5F40 /* RecordController.swift */; settings = {ASSET_TAGS = (); }; };
 		94299BE01BC059FC006D2EFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94299BDF1BC059FC006D2EFC /* AppDelegate.swift */; };
 		94299BE21BC059FC006D2EFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94299BE11BC059FC006D2EFC /* ViewController.swift */; };
 		94299BE51BC059FC006D2EFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94299BE31BC059FC006D2EFC /* Main.storyboard */; };
@@ -26,6 +32,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D8BFFDD1BC060B600EF5F40 /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		8D8BFFDF1BC0617D00EF5F40 /* BibleLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BibleLanguage.swift; sourceTree = "<group>"; };
+		8D8BFFE11BC0718000EF5F40 /* BibleVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BibleVersion.swift; sourceTree = "<group>"; };
+		8D8BFFE31BC08E2900EF5F40 /* BibleBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BibleBook.swift; sourceTree = "<group>"; };
+		8D8BFFE71BC09BDC00EF5F40 /* BibleVerse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BibleVerse.swift; sourceTree = "<group>"; };
+		8D8BFFE91BC0B05A00EF5F40 /* RecordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordController.swift; sourceTree = "<group>"; };
 		94299BDA1BC059FC006D2EFC /* Viral-Bible-Ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Viral-Bible-Ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94299BDE1BC059FC006D2EFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94299BDF1BC059FC006D2EFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +95,12 @@
 				94299BE61BC059FC006D2EFC /* Images.xcassets */,
 				94299BE81BC059FC006D2EFC /* LaunchScreen.xib */,
 				94299BDD1BC059FC006D2EFC /* Supporting Files */,
+				8D8BFFDD1BC060B600EF5F40 /* APIController.swift */,
+				8D8BFFDF1BC0617D00EF5F40 /* BibleLanguage.swift */,
+				8D8BFFE11BC0718000EF5F40 /* BibleVersion.swift */,
+				8D8BFFE31BC08E2900EF5F40 /* BibleBook.swift */,
+				8D8BFFE71BC09BDC00EF5F40 /* BibleVerse.swift */,
+				8D8BFFE91BC0B05A00EF5F40 /* RecordController.swift */,
 			);
 			path = "Viral-Bible-Ios";
 			sourceTree = "<group>";
@@ -156,6 +174,7 @@
 		94299BD21BC059FC006D2EFC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Alan Young";
 				TargetAttributes = {
@@ -212,8 +231,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D8BFFEA1BC0B05A00EF5F40 /* RecordController.swift in Sources */,
+				8D8BFFE01BC0617D00EF5F40 /* BibleLanguage.swift in Sources */,
 				94299BE21BC059FC006D2EFC /* ViewController.swift in Sources */,
 				94299BE01BC059FC006D2EFC /* AppDelegate.swift in Sources */,
+				8D8BFFE21BC0718000EF5F40 /* BibleVersion.swift in Sources */,
+				8D8BFFDE1BC060B600EF5F40 /* APIController.swift in Sources */,
+				8D8BFFE81BC09BDC00EF5F40 /* BibleVerse.swift in Sources */,
+				8D8BFFE41BC08E2900EF5F40 /* BibleBook.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +434,7 @@
 				94299BFB1BC059FC006D2EFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94299BFC1BC059FC006D2EFC /* Build configuration list for PBXNativeTarget "Viral-Bible-IosTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +443,7 @@
 				94299BFE1BC059FC006D2EFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
