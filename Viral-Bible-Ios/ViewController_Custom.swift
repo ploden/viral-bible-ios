@@ -46,7 +46,26 @@ class ViewController_Custom: UIViewController, UITableViewDataSource,UITableView
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("showView", sender:self)
         
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender:
+        AnyObject?)
+    {
+        if (segue.identifier == "showView")
+        {
+            // upcoming is set to NewViewController (.swift)
+            var upcoming: NewViewController = segue.destinationViewController
+                as! NewViewController
+            // indexPath is set to the path that was tapped
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                // titleString is set to the title at the row in the objects array.
+                let titleString = self.languages[indexPath.row].name
+                // the titleStringViaSegue property of NewViewController is set.
+                //upcoming.titleStringViaSegue = titleString
+                self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            }
+        }
     }
     
 }

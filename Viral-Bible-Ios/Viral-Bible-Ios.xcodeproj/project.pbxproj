@@ -23,6 +23,7 @@
 		94299BF61BC059FC006D2EFC /* Viral_Bible_IosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94299BF51BC059FC006D2EFC /* Viral_Bible_IosTests.swift */; };
 		94299C061BC07BCD006D2EFC /* ViewController_Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94299C051BC07BCD006D2EFC /* ViewController_Custom.swift */; };
 		94299C081BC09332006D2EFC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94299C071BC09332006D2EFC /* TableViewCell.swift */; };
+		94A86B561BC0E66000394489 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A86B551BC0E66000394489 /* NewViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		94299C001BC07303006D2EFC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		94299C051BC07BCD006D2EFC /* ViewController_Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController_Custom.swift; path = "Viral-Bible-Ios.xcodeproj/../ViewController_Custom.swift"; sourceTree = SOURCE_ROOT; };
 		94299C071BC09332006D2EFC /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		94A86B551BC0E66000394489 /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				94299BE61BC059FC006D2EFC /* Images.xcassets */,
 				94299BE81BC059FC006D2EFC /* LaunchScreen.xib */,
 				94299C051BC07BCD006D2EFC /* ViewController_Custom.swift */,
+				94A86B551BC0E66000394489 /* NewViewController.swift */,
 				94299C071BC09332006D2EFC /* TableViewCell.swift */,
 				94299BDD1BC059FC006D2EFC /* Supporting Files */,
 				8D8BFFF71BC0D95800EF5F40 /* RecordViewController.swift */,
@@ -303,6 +306,7 @@
 				8D8BFFF11BC0CDBA00EF5F40 /* RecordController.swift in Sources */,
 				8D8BFFF31BC0CDBA00EF5F40 /* BibleVersion.swift in Sources */,
 				8D8BFFF61BC0CDBA00EF5F40 /* BibleLanguage.swift in Sources */,
+				94A86B561BC0E66000394489 /* NewViewController.swift in Sources */,
 				94299C081BC09332006D2EFC /* TableViewCell.swift in Sources */,
 				8D8BFFF41BC0CDBA00EF5F40 /* BibleBook.swift in Sources */,
 				94299C061BC07BCD006D2EFC /* ViewController_Custom.swift in Sources */,

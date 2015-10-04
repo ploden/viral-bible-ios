@@ -41,13 +41,13 @@
                                         <rect key="frame" x="0.0" y="86" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D05-bl-V1W" id="pvn-yI-X6E">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Language" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NjB-sE-QPQ">
                                                     <rect key="frame" x="33" y="11" width="300" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -74,9 +74,69 @@
                     <navigationItem key="navigationItem" id="efv-iz-pTu"/>
                     <connections>
                         <outlet property="tableView" destination="LFD-s3-ldq" id="lcQ-c0-xs1"/>
+                        <segue destination="Ubc-AX-swp" kind="show" identifier="showView" id="I7X-QB-bvW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J6R-5U-riQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379" y="340"/>
+        </scene>
+        <!--New View Controller-->
+        <scene sceneID="szp-Ft-DWk">
+            <objects>
+                <viewController id="Ubc-AX-swp" customClass="NewViewController" customModule="Viral_Bible_Ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZQe-Fo-ta0"/>
+                        <viewControllerLayoutGuide type="bottom" id="RIG-2c-UUk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AD1-dk-4oG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="QWW-EH-pd8">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="jTj-Xb-293" customClass="TableViewCell" customModule="Viral_Bible_Ios">
+                                        <rect key="frame" x="0.0" y="86" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jTj-Xb-293" id="YKh-DT-Cke">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Language" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTj-0a-w59">
+                                                    <rect key="frame" x="33" y="11" width="300" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="qTj-0a-w59" id="EXY-bD-0jt"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ubc-AX-swp" id="9sW-Ek-jQw"/>
+                                    <outlet property="delegate" destination="Ubc-AX-swp" id="wXh-cF-QLW"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="QWW-EH-pd8" secondAttribute="trailing" id="5gN-YZ-NdS"/>
+                            <constraint firstItem="RIG-2c-UUk" firstAttribute="top" secondItem="QWW-EH-pd8" secondAttribute="bottom" id="env-qL-7Wz"/>
+                            <constraint firstItem="QWW-EH-pd8" firstAttribute="top" secondItem="ZQe-Fo-ta0" secondAttribute="bottom" id="jIp-Zb-BJ7"/>
+                            <constraint firstItem="QWW-EH-pd8" firstAttribute="leading" secondItem="AD1-dk-4oG" secondAttribute="leading" id="moQ-B4-vf0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rtr-r3-1Ja"/>
+                    <connections>
+                        <outlet property="tableView" destination="QWW-EH-pd8" id="qHm-K5-tgm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4FJ-ec-jqR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="379" y="340"/>
         </scene>
@@ -93,13 +153,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43M-co-G2M">
-                                <rect key="frame" x="44" y="40" width="512" height="20.5"/>
+                                <rect key="frame" x="44" y="40" width="512" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KVe-eO-ddF">
-                                <rect key="frame" x="200" y="148.5" width="200" height="44"/>
+                                <rect key="frame" x="200" y="149" width="200" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGq-0l-aev">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="44"/>
