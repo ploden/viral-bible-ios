@@ -1,0 +1,13 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '6.0'
+
+target 'Viral-Bible-Ios' do
+
+pod 'AWSS3', '~> 2.1.0'
+
+end
+
+target 'Viral-Bible-IosTests' do
+
+end
+
