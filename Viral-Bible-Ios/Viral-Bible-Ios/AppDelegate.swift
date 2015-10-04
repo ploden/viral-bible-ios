@@ -15,6 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        let verse = BibleVerse(verseText: "Here is a verse.", verseID: 1)
+        
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("RecordViewController") as! RecordViewController
+        vc.verse = verse
+        self.window?.rootViewController = vc
         return true
     }
 

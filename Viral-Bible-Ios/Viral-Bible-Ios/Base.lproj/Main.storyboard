@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xjJ-o0-Lnf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xjJ-o0-Lnf">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -37,8 +38,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="D05-bl-V1W" customClass="TableViewCell" customModule="Viral_Bible_Ios">
+                                        <rect key="frame" x="0.0" y="86" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D05-bl-V1W" id="pvn-yI-X6E">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Language" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NjB-sE-QPQ">
@@ -76,6 +79,102 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J6R-5U-riQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="379" y="340"/>
+        </scene>
+        <!--Record View Controller-->
+        <scene sceneID="k2O-Zi-wEG">
+            <objects>
+                <viewController storyboardIdentifier="RecordViewController" id="8zN-KT-uJY" customClass="RecordViewController" customModule="Viral_Bible_Ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JgR-id-48H"/>
+                        <viewControllerLayoutGuide type="bottom" id="nii-H1-kr7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ko9-qi-XTO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43M-co-G2M">
+                                <rect key="frame" x="44" y="40" width="512" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KVe-eO-ddF">
+                                <rect key="frame" x="200" y="148.5" width="200" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGq-0l-aev">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="66" id="Dmc-Fb-c1h"/>
+                                            <constraint firstAttribute="height" constant="44" id="oxI-zH-HjG"/>
+                                            <constraint firstAttribute="width" constant="100" id="vYX-CR-xRD"/>
+                                        </constraints>
+                                        <state key="normal" title="Record"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Dmc-Fb-c1h"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="recordButtonTouched:" destination="8zN-KT-uJY" eventType="touchUpInside" id="7bN-iA-ayO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sH2-If-Vv4">
+                                        <rect key="frame" x="100" y="0.0" width="100" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="179-ws-35V"/>
+                                            <constraint firstAttribute="width" constant="66" id="hSN-qh-sNC"/>
+                                        </constraints>
+                                        <state key="normal" title="Play"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="hSN-qh-sNC"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="playButtonTouched:" destination="8zN-KT-uJY" eventType="touchUpInside" id="h5D-He-fsv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="sH2-If-Vv4" firstAttribute="leading" secondItem="SGq-0l-aev" secondAttribute="trailing" id="10X-Ev-r0g"/>
+                                    <constraint firstAttribute="trailing" secondItem="sH2-If-Vv4" secondAttribute="trailing" id="1ZD-5O-Ljp"/>
+                                    <constraint firstAttribute="bottom" secondItem="sH2-If-Vv4" secondAttribute="bottom" id="Cdw-D9-Ffg"/>
+                                    <constraint firstItem="SGq-0l-aev" firstAttribute="width" secondItem="sH2-If-Vv4" secondAttribute="width" id="Run-wj-gR3"/>
+                                    <constraint firstAttribute="bottom" secondItem="SGq-0l-aev" secondAttribute="bottom" id="Smx-n2-9MI"/>
+                                    <constraint firstItem="SGq-0l-aev" firstAttribute="leading" secondItem="KVe-eO-ddF" secondAttribute="leading" id="XiC-Ja-7NG"/>
+                                    <constraint firstItem="SGq-0l-aev" firstAttribute="top" secondItem="KVe-eO-ddF" secondAttribute="top" id="lyu-sA-fRa"/>
+                                    <constraint firstItem="sH2-If-Vv4" firstAttribute="top" secondItem="KVe-eO-ddF" secondAttribute="top" id="pAe-Ex-aH2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nii-H1-kr7" firstAttribute="top" relation="greaterThanOrEqual" secondItem="KVe-eO-ddF" secondAttribute="bottom" constant="88" id="270-GN-kd4"/>
+                            <constraint firstAttribute="trailing" secondItem="43M-co-G2M" secondAttribute="trailing" constant="44" id="9rH-pF-xPP"/>
+                            <constraint firstItem="nii-H1-kr7" firstAttribute="top" secondItem="43M-co-G2M" secondAttribute="bottom" constant="551" id="MlF-Ou-5Yw"/>
+                            <constraint firstItem="43M-co-G2M" firstAttribute="top" secondItem="JgR-id-48H" secondAttribute="bottom" constant="20" id="T3i-Im-ldO"/>
+                            <constraint firstItem="43M-co-G2M" firstAttribute="leading" secondItem="Ko9-qi-XTO" secondAttribute="leading" constant="44" id="Xn8-cV-3BD"/>
+                            <constraint firstItem="KVe-eO-ddF" firstAttribute="centerX" secondItem="Ko9-qi-XTO" secondAttribute="centerX" id="bsU-sq-7PL"/>
+                            <constraint firstItem="KVe-eO-ddF" firstAttribute="top" secondItem="43M-co-G2M" secondAttribute="bottom" constant="88" id="lYb-tI-yGy"/>
+                            <constraint firstItem="nii-H1-kr7" firstAttribute="top" secondItem="KVe-eO-ddF" secondAttribute="bottom" constant="312" id="myf-JM-gYo"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="MlF-Ou-5Yw"/>
+                                <exclude reference="myf-JM-gYo"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="playButton" destination="sH2-If-Vv4" id="qjS-l1-Iqq"/>
+                        <outlet property="recordButton" destination="SGq-0l-aev" id="Lyl-cn-WCR"/>
+                        <outlet property="verseLabel" destination="43M-co-G2M" id="78W-rb-YzS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fS5-9F-KUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379" y="1208"/>
         </scene>
     </scenes>
 </document>
