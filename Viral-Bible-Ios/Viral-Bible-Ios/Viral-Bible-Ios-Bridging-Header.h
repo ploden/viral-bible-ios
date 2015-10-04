@@ -7,3 +7,6 @@
 //
 
 #import <AWSS3/AWSS3.h>
+
+#import "VBUploadController.h"
+#import "MBProgressHUD.h"

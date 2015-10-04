@@ -187,81 +187,105 @@ class APIController {
                         }
                         
                         completion(verses: bibleVerses, error: nil)
+
+                        /*
+                        self.getRecordings(book, chapterID: chapterID, completion: { (verses, error) -> () in
+                            if let _ = error {
+                                completion(verses: nil, error: error)
+                            } else {
+                                // add to the verses
+                                completion(verses: bibleVerses, error: nil)
+                            }
+                        })
+                        */
                     } catch {
-                        
+                        completion(verses: nil, error: NSError(domain: "VBErrorDomain", code: 0, userInfo: nil))
                     }
+                } else {
+                    completion(verses: nil, error: NSError(domain: "VBErrorDomain", code: 0, userInfo: nil))
                 }
             }).resume()
         }
     }
     
     class func getRecordings(book: BibleBook, chapterID: Int16, completion: ((verses: [BibleVerseRecording]?, error: NSError?) -> ())) -> () {
+        let url = self.recordingsURL(book, chapterID: chapterID)
+        let request = NSMutableURLRequest(URL: url)
         
-    }
-    
-    class func uploadRecording(book: BibleBook, chapterID: Int16, fileURL: NSURL, completion: ((error: NSError?) -> ())) -> () {
+        let session = NSURLSession.sharedSession()
+        
+        session.dataTaskWithRequest(request, completionHandler: { (responseData, response, error) -> Void in
+            if let responseData = responseData {
+                //print(String(data: responseData, encoding: NSUTF8StringEncoding))
                 
-        let data = NSData()
-        
-        let request = AWSS3PutObjectRequest()
-        request.bucket = Helper.S3Bucket()
-        request.contentType = "audio/x-caf";
-        request.body = data
-        request.key = "\(NSUUID().UUIDString).caf"
-        request.contentLength = data.length;        
-        
-        AWSS3.defaultS3().putObject(request).continueWithBlock { (task) -> AnyObject! in
-            if let error = task.error {
-                // handle error
-                print("here is an error")
-            } else {
-                print("upload succeeded")
+                do {
+                    let json = try NSJSONSerialization.JSONObjectWithData(responseData, options: NSJSONReadingOptions.AllowFragments)
+                    
+                    var recordings = [BibleVerseRecording]()
+                    
+                    if let recordingDicts = json as? [[String : AnyObject]] {
+                        for recordingDict in recordingDicts {
+                            if let
+                                recordingURL = recordingDict["verse_id"] as? String
+                            {
+                                //bibleVerses.append(bibleVerse)
+                            }
+                        }
+                    }
+                } catch {
+                    
+                }
             }
-            return nil
-        }
-        
-        /*
-        NSAssert(data, @"nonnull is nil");
-        
-        AWSS3 *s3 = [AWSS3 defaultS3];
-        
-        AWSS3PutObjectRequest *request = [AWSS3PutObjectRequest new];
-        request.bucket = [Helper S3Bucket];
-        request.contentType = @"image/jpg";
-        request.body = data;
-        request.key = [NSString stringWithFormat:@"%@.jpg", [[NSUUID UUID] UUIDString]];
-        request.contentLength = [NSNumber numberWithInteger:data.length];
-        
-        [[s3 putObject:request] continueWithBlock:^id(BFTask *task) {
-        if (task.error) {
-        completion(task.error);
-        } else {
-        NSURL *baseURL = [[[s3 configuration] endpoint] URL];
-        NSURL *bucketURL = [baseURL URLByAppendingPathComponent:[Helper S3Bucket]];
-        NSURL *imageURL = [bucketURL URLByAppendingPathComponent:request.key];
-        
-        NSDictionary *params = @{@"profile_pic_url" : [imageURL absoluteString]};
-        NSString *path = @"tippit_users/update_profile_pic";
-        
-        [[self sharedInstance] dataTaskWithMethod:PRPStoreHTTPMethodPOST remotePath:path responseKeyPath:nil params:params entityName:nil parentObject:nil relationship:nil completion:^(NSArray *data, NSError *error) {
-        if ( ! error ) {
-        [[UserManager sharedManager] currentUser].profilePicURL = [imageURL absoluteString];
-        
-        TPTBaseTippitUser *bgCurrent = (TPTBaseTippitUser *)[[[self sharedInstance] backgroundContext] objectWithID:[[[UserManager sharedManager] currentUser] objectID]];
-        bgCurrent.profilePicURL = [imageURL absoluteString];
-        [self saveContext:[[self sharedInstance] backgroundContext]];
-        }
-        completion(error);
-        }];
-        }
-        return nil;
-        }];
-        */
+        }).resume()
     }
     
-    class func recordingsURL(book: BibleBook, chapterID: Int16) -> NSURL {
-        // http://viralbible01.s3-website-us-east-1.amazonaws.com
+    class func uploadRecording(book: BibleBook, chapterID: Int16, bibleVerseID : Int16, fileURL: NSURL, completion: ((error: NSError?) -> ())) -> () {
         
+        let data = NSData(contentsOfURL: fileURL)!
+        
+        let filename = "\(NSUUID().UUIDString).caf"
+        let bucket = Helper.S3Bucket()
+        let contentType = "audio/x-caf"
+        
+        VBUploadController.uploadData(data, filename: filename, bucket: bucket, contentType: contentType, completion: { error in
+            if let _ = error {
+                // error handling
+            } else {
+                self.getRecordings(book, chapterID: chapterID, completion: { (verses, error) -> () in
+                    if let _ = error {
+                        // error handling
+                    } else {
+                        var mutableVerses : [BibleVerseRecording]
+                        
+                        if verses == nil {
+                            mutableVerses = [BibleVerseRecording]()
+                        } else {
+                            mutableVerses = verses!
+                        }
+                        
+                        let url = self.recordingsURL(book, chapterID: chapterID)
+                        let newRecording = BibleVerseRecording(recordingURL: url, bibleVerseID: bibleVerseID)
+                        mutableVerses.append(newRecording)
+                        
+                        if let any = mutableVerses as? AnyObject {
+                            do {
+                                let jsonData = try NSJSONSerialization.dataWithJSONObject(any, options: NSJSONWritingOptions.PrettyPrinted)
+                                print(String(data: jsonData, encoding: NSUTF8StringEncoding))
+                                let filename = self.recordingsFilename(book, chapterID: chapterID)
+                                VBUploadController.uploadData(jsonData, filename: filename, bucket: Helper.S3Bucket(), contentType: "text/json", completion: { error in
+                                    
+                                })
+                            } catch {
+                                
+                            }
+                        }
+                    }
+                })
+            }
+        })
+    }
+
+    class func recordingsFilename(book: BibleBook, chapterID: Int16) -> String {
         let lang = book.bibleVersion.bibleLanguage.languageFamilyCode
         let version = book.bibleVersion.damID
         let book = book.bookID
@@ -269,9 +293,17 @@ class APIController {
         
         let filename = "\(lang)_\(version)_\(book)_\(chapter).json"
         
+        return filename
+    }
+
+    class func recordingsURL(book: BibleBook, chapterID: Int16) -> NSURL {
+        // http://viralbible01.s3-website-us-east-1.amazonaws.com
+        
+        let filename = self.recordingsFilename(book, chapterID: chapterID)
+        
         let components = NSURLComponents()
-        components.path = filename
-        components.host = "viralbible01.s3-website-us-east-1.amazonaws.com"
+        components.path = "/\(filename)"
+        components.host = "viralbible01.s3.amazonaws.com"
         components.scheme = "http"
         
         return components.URL!

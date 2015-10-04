@@ -20,8 +20,12 @@ class LanguagesVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
 
         self.tableView.registerNib(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
 
+        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        
         APIController.getLanguages { (languages, error) -> () in
             NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                MBProgressHUD.hideHUDForView(self.view, animated: true)
+                
                 if let languages = languages {
                     self.languages = languages
                 }

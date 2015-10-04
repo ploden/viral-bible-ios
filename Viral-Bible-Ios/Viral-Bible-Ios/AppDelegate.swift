@@ -15,6 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        let credentialsProvider = AWSStaticCredentialsProvider(accessKey: Helper.S3AccessKeyID(), secretKey: Helper.S3SecretKey())
+        let defaultServiceConfiguration = AWSServiceConfiguration(region: AWSRegionType.USEast1, credentialsProvider: credentialsProvider)
+        defaultServiceConfiguration.maxRetryCount = 3
+        AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = defaultServiceConfiguration
+        
         return true
     }
 

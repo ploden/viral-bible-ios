@@ -21,8 +21,12 @@ class VersesDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         self.tableView.registerNib(UINib(nibName: "VerseTVCell", bundle: nil), forCellReuseIdentifier: "VerseTVCell")
 
+        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+
         APIController.getVerses(self.bibleBook, chapterID: chapterNumber) { (verses, error) -> () in
             NSOperationQueue.mainQueue().addOperationWithBlock({
+                MBProgressHUD.hideHUDForView(self.view, animated: true)
+                
                 if let verses = verses {
                     self.bibleVerses = verses
                 }

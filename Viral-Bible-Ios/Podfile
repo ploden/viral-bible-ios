@@ -4,6 +4,7 @@
 target 'Viral-Bible-Ios' do
 
 pod 'AWSS3', '~> 2.1.0'
+pod 'MBProgressHUD'
 
 end
 

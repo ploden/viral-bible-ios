@@ -10,19 +10,19 @@ import Foundation
 
 class Helper : NSObject {
     
-    class func S3SecretKey() -> String? {
+    class func S3SecretKey() -> String {
         let info = NSBundle.mainBundle().infoDictionary
-        return info?["S3_SECRET_KEY"] as? String
+        return info?["S3_SECRET_KEY"] as! String
     }
     
-    class func S3AccessKeyID() -> String? {
+    class func S3AccessKeyID() -> String {
         let info = NSBundle.mainBundle().infoDictionary
-        return info?["S3_ACCESS_KEY_ID"] as? String
+        return info?["S3_ACCESS_KEY_ID"] as! String
     }
     
-    class func S3Bucket() -> String? {
+    class func S3Bucket() -> String {
         let info = NSBundle.mainBundle().infoDictionary
-        return info?["S3_BUCKET"] as? String
+        return info?["S3_BUCKET"] as! String
     }
     
 }

@@ -21,8 +21,11 @@ class BooksVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         self.tableView.registerNib(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
 
         if let version = self.bibleVersion {
+            MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+
             APIController.getBooks(version) { (books, error) -> () in
                 NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                    MBProgressHUD.hideHUDForView(self.view, animated: true)
                     self.books = books
                     self.tableView.reloadData()
                 })

@@ -22,8 +22,12 @@ class VersionsVC: UIViewController {
         self.tableView.registerNib(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         
         if let lang = self.bibleLanguage {
+            MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+
             APIController.getVersions(lang) { (versions, error) -> () in
                 NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                    MBProgressHUD.hideHUDForView(self.view, animated: true)
+                    
                     if let versions = versions {
                         self.versions = versions
                     }

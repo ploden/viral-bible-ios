@@ -94,8 +94,19 @@ class RecordVC: UIViewController, RecordControllerDelegate {
             verse = self.bibleVerse,
             url = self.recordController?.fileURL
         {
-            APIController.uploadRecording(verse.bibleBook, chapterID: verse.chapterID, fileURL: url, completion: { (error) -> () in
-                
+            let hudView = self.view
+            MBProgressHUD.showHUDAddedTo(hudView, animated: true)
+            
+            APIController.uploadRecording(verse.bibleBook, chapterID: verse.chapterID, bibleVerseID: verse.bibleVerseID, fileURL: url, completion: { (error) -> () in
+                NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                    MBProgressHUD.hideHUDForView(hudView, animated: true)
+                    
+                    if let _ = error {
+                        // show error message
+                    } else {
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                    }
+                })
             })
         }
     }
